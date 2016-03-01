@@ -4,6 +4,15 @@ body {
   font-family: "Droid Sans", serif;
 }
 
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 body h1, h2, h3, h4 {
   font-family: "Ubuntu", sans-serif;
   margin-bottom: 10px;
@@ -35,15 +44,6 @@ header h1 {
 header nav {
   float: right;
   width: 285px;
-}
-
-header nav a {
-  color: red;
-  text-decoration: none;
-}
-
-header nav a:hover {
-  text-decoration: underline;
 }
 
 main {
@@ -78,6 +78,12 @@ main input {
   float: right;
 }
 
+footer h5 {
+  margin-bottom: 20px;
+  font-size: large;
+  font-weight: bold;
+}
+
 footer .left {
   float: left;
   width: 570px;
@@ -86,4 +92,28 @@ footer .left {
 footer .sitemap {
   float: right;
   width: 285px;
+}
+
+footer .container .left .contact p {
+  font-family: "Ubuntu", sans-serif;
+  margin-bottom: 5px;
+}
+
+footer .container .left .contact p:first-of-type {
+  font-style: italic;
+  color: maroon;
+}
+
+footer .sitemap .left {
+  width: 129px;
+  float: left;
+}
+
+footer .sitemap .right {
+  width: 129px;
+  float: right;
+}
+
+footer .sitemap li {
+  margin-bottom: 5px;
 }
