@@ -1,5 +1,11 @@
 body {
   background: #f9e933;
+  font-size: 100%;
+  font-family: "Droid Sans", serif;
+}
+
+body h1, h2, h3, h4 {
+  font-family: "Ubuntu", sans-serif;
 }
 
 header, main, footer {
@@ -19,6 +25,9 @@ header {
 header h1 {
   float: left;
   width: 570px;
+  font-size: 2.5em;
+  font-style: italic;
+  color: brown;
 }
 
 header nav {
@@ -39,6 +48,14 @@ main .left {
 main .right {
   float: right;
   width: 285px;
+}
+
+main h2 {
+  font-size: xx-large;
+}
+
+main h3 {
+  font-size: x-large;
 }
 
 footer .left {
