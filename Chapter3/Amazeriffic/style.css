@@ -74,6 +74,10 @@ main p {
   margin-bottom: 30px;
 }
 
+main input {
+  float: right;
+}
+
 footer .left {
   float: left;
   width: 570px;
