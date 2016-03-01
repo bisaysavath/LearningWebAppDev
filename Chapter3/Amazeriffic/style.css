@@ -15,6 +15,7 @@ header, main, footer {
 header .container, main .container, footer .container {
   max-width: 855px;
   margin: auto;
+  padding: 30px;
 }
 
 header {
@@ -38,6 +39,7 @@ header nav {
 main {
   background: white;
   overflow: auto;
+  padding: 50px;
 }
 
 main .left {
