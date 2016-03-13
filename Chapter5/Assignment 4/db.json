@@ -1,0 +1,49 @@
+{
+  "actors": [
+    {
+      "name": "Bryan Cranston",
+      "starred": true,
+      "id": 1
+    },
+    {
+      "name": "Aaron Paul",
+      "starred": true,
+      "id": 2
+    },
+    {
+      "name": "Bob Ordenkirk",
+      "starred": false,
+      "id": 3
+    },
+    {
+      "name": "Dean Norris",
+      "starred": false,
+      "id": 4
+    },
+    {
+      "name": "Taylor Swift",
+      "starred": true,
+      "id": 5
+    },
+    {
+      "name": "Bob Nyland",
+      "starred": false,
+      "id": 6
+    },
+    {
+      "name": "Ben Afflick",
+      "starred": false,
+      "id": 7
+    },
+    {
+      "name": "Brad Pitt",
+      "starred": true,
+      "id": 8
+    },
+    {
+      "name": "Bobby Lee",
+      "starred": true,
+      "id": 9
+    }
+  ]
+}
