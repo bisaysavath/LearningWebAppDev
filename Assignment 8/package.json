@@ -1,0 +1,22 @@
+{
+  "name": "amazeriffic",
+  "description": "The best to-do list app in the history of the world",
+  "version": "0.0.1",
+  "engines":{
+    "node" : "^4.1.1",
+    "npm" : "^2.1.x"
+  },
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.1.11",
+    "socket.io": "^1.4.5"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
