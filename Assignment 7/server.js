@@ -2,11 +2,14 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     mongodb = require("mongodb"),
     app = express(),
+    port = process.env.PORT,
+    service,
     mongoClient;
 
 // Set up Mongo DB and collection
 mongoClient = mongodb.MongoClient;
-mongoClient.connect("mongodb://localhost/hw7", function(err, db) {
+service = JSON.parse(process.env.VCAP_SERVICES);
+mongoClient.connect(services.mongolab[0].credentials.uri, function(err, db) {
     "use strict";
 
     if (err !== null) {

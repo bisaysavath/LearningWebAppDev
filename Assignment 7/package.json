@@ -1,0 +1,9 @@
+{
+    "name": "tutorial",
+    "description": "a tutorial on using node, twitter, redis, and express",
+    "version": "0.0.1",
+    "dependencies": {
+        "express": "4.13.x",
+        "mongodb": "2.1.x"
+    }
+}
