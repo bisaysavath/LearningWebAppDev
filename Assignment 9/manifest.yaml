@@ -1,0 +1,11 @@
+---
+applications:
+- name: assignment8-CPSC473
+  memory: 256M
+  command: node server.js
+  disk_quota: 1024M
+  host: assignment8-CPSC473
+  domain: cfapps.io
+  instances: 1
+  services:
+  - mongodb_service

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Amazeriffic!</title>
+    <link href="stylesheets/reset.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1>Amazeriffic!</h1>
+        <nav>
+          <a href="#">Sign Up!</a> |
+          <a href="#">FAQ</a> |
+          <a href="#">Support</a>
+        </nav>
+      </div>
+    </header>
+
+
+    <main>
+      <div class="container">
+        <div class="tabs" data-bind="foreach: tabs">
+          <a href=""><span data-bind="text: $data.name,
+          attr: {class: ($data.active) ? 'active' : ''},
+          click: $parent.tabClick"></span></a>
+          <!--Placeholder for tabs adding to later by app>js-->
+        </div>
+        <div class="content" data-bind="visible: !tagsVisibility() && !addVisibility()">
+           <ul data-bind="foreach: toDos">
+             <li data-bind="text: $data"></li>
+           </ul>
+        </div>
+        <div class="content" data-bind="foreach: tags, visible: tagsVisibility() && !addVisibility()">
+           <h3 data-bind="text: tag"></h3>
+           <ul data-bind="foreach: des">
+             <li data-bind="text: $data"></li>
+           </ul>
+        </div>
+        <div class="content" data-bind="visible: addVisibility()">
+           <h2>Description:</h2>
+           <input type="text" data-bind="value: desInput">
+           <h2>Tags:</h2>
+           <input type="text" data-bind="value: tagsInput">
+           <button data-bind="click: save">+</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="contact">
+          <h5>Contact Us</h5>
+          <p>Amazeriffic!</p>
+          <p>555 Fiftieth Street</p>
+          <p>Asheville, NC 28801</p>
+        </div>
+        <div class="sitemap">
+          <h5>Sitemap</h5>
+          <ul>
+            <div class="left">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Privacy</a></li>
+            </div>
+            <div class="right">
+              <li><a href="#">Support</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Careers</a></li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script src="javascripts/app.js"></script>
+  </body>
+</html>
