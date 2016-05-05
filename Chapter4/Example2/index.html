@@ -15,14 +15,11 @@
     <main>
       <section class='comment-input'>
         <p>Add Your Comment:</p>
-        <input><button>+</button>
+        <input data-bind="value: newComment"><button data-bind="click: addComment">+</button>
       </section>
 
-      <section class='comments'>
-        <p>This is the first comment!</p>
-        <p>Here's the second one!</p>
-        <p>And this is one more.</p>
-        <p>Here is another one!</p>
+      <section class='comments' data-bind="foreach: comments">
+        <p data-bind="text: $data"></p>
       </section>
     </main>
 
@@ -31,6 +28,7 @@
     </footer>
 
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

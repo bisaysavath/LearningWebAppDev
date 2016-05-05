@@ -1,27 +1,23 @@
-var main = function () {
+function AppViewModel() {
     "use strict";
 
-    var addCommentFromInputBox = function () {
-        var $new_comment;
+    var self = this;
 
-        if ($(".comment-input input").val() !== "") {
-            $new_comment = $("<p>").text($(".comment-input input").val());
-            $new_comment.hide();
-            $(".comments").append($new_comment);
-            $new_comment.fadeIn();
-            $(".comment-input input").val("");
+    self.comments = ko.observableArray([
+        "This is the first comment!",
+        "Here's the second one!",
+        "And this is one more.",
+        "Here is another one!"
+    ]);
+
+    self.newComment = ko.observable();
+
+    self.addComment = function() {
+        if (self.newComment !== "") {
+            self.comments.push(self.newComment());
+            self.newComment("");
         }
     };
+}
 
-    $(".comment-input button").on("click", function (event) {
-        addCommentFromInputBox();
-    });
-
-    $(".comment-input input").on("keypress", function (event) {
-        if (event.keyCode === 13) {
-            addCommentFromInputBox();
-        }
-    });
-};
-
-$(document).ready(main);
+ko.applyBindings(new AppViewModel());
